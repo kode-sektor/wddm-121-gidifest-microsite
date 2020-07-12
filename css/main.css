@@ -167,6 +167,9 @@ img {
 p {
 	margin-bottom: 12px;
 }
+address {
+	font-style: normal;
+}
 .sr-only {
   position: absolute;
   width: 1px;
@@ -217,7 +220,7 @@ p {
 	content: "";
 	bottom: -2px;
 	right: 0px;
-	width: 70%;
+	width: 60%;
 	border: 2px solid var(--red);
 }
 
@@ -354,7 +357,7 @@ p {
 .slide-content .cta-btn {
 	display: inline-block;
 	margin-bottom: 15px;
-	padding: 5px 10px;
+	padding: 10px 15px;
 	background-color: rgba(238, 16, 16, .4);
 	color: white;
 	font-weight: bolder;
@@ -398,4 +401,80 @@ p {
 	left: 40px;
 	opacity: .8;
 	transform: scale(.6) rotate(-30deg);
+}
+
+/*Intro*/
+
+ main {
+ 	padding: 56px 0;
+ }
+.gidi-intro {
+	width: 75%;
+	margin: 0 auto;
+}
+.african-tiled-art {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	word-wrap: break-word;
+	background-color: #fff;
+	background-clip: border-box;
+	border: 1px solid rgba(0,0,0,.125);
+	height: 100%;
+}
+.card-img {
+    width: 100%;
+    height: 100%
+}
+.contact-box-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1.25rem;
+}
+.contact-box {
+    display: inline-block;
+    max-width: 582px;
+    padding: 40px 55px 40px 55px;
+    position: absolute;
+    left: 0;
+    color: var(--light-grey);
+    bottom: 0;
+    text-align: center;
+    background: rgba(26, 10, 56, .8);
+}
+.contact-box address {
+	padding: 5px 0;
+	font-size: 1.5em;
+	margin-bottom: 10px;
+	border-bottom: 2px solid black;
+}
+.contact-box address {
+	line-height: 35px;
+}
+.headsup {
+	padding: 20px;
+	margin-top: 25px;
+	background: rgba(0,0,0,.6);
+}
+.headsup h3 {
+	margin-top: 10px;
+	margin-bottom: 14px;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+.headsup h3 b {
+	color: var(--red);
+	font-weight: normal;
+}
+.headsup p {
+	font-size: .9em;
+	opacity: .7;
+	line-height: 30px;
+}
+.country-flag {
+	opacity: .5;
 }
