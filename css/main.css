@@ -183,15 +183,44 @@ p {
 .page-header {
 	width: 100%;
 	padding-top: 50px;
+	padding-bottom: 80px;
 	background: var(--dark-purple);
 }
 .inner-header {
+	position: relative;
 	width: 100%;
+}
+.inner-header:before {
+	position: absolute;
+	content: "";
+	top: 40px;
+	width: 100%;
+	height: 148px;
+	background-color: var(--light-blue);
 }
 .hero {
 	width: 75%;
+	position: relative;
+	padding-left: 50px;
 	margin: auto;
+	background-color: black;
 }
+.hero:before {
+	position: absolute;
+	content: "";
+	right: 50px;
+	height: 100%;
+	border: thin solid rgba(250, 250, 250, .1);
+}
+.hero:after {
+	position: absolute;
+	content: "";
+	bottom: -2px;
+	right: 0px;
+	width: 70%;
+	border: 2px solid var(--red);
+}
+
 .main-nav-bar, .main-nav-links, .social-links {
 	display: flex;
 	border: thin solid chocolate;
@@ -199,6 +228,7 @@ p {
 .main-nav-bar {
 	justify-content: space-between;
 	flex: 0 0 100%;
+	padding: 5px 10px;
 	border-bottom: thin solid rgba(229, 229, 229, .1);
 }
 .logo-frame {
@@ -234,6 +264,14 @@ p {
 .poster {
 	display: flex;
 	width: 100%;
+}
+.poster:before {
+	position: absolute;
+	content: "";
+	right: 0;
+	bottom: 0;
+	height: 150px;
+	border: thin solid rgba(250, 250, 250, .5);
 }
 .caption {
 	flex: 0 0 20%;
@@ -283,24 +321,26 @@ p {
 }
 .slide-content > figure {
 	position: relative;
-	/padding-top: 100px;
+	padding-top: 50px;
 	/right: 50px;
 	height: inherit;
 	width: 50%;
+	height: 380px;
 	border: 1px solid indigo;
 }
-.slide-content > figure img:not(live-stamp) {
+.slide-content > figure img:not(.live-stamp) {
 	opacity: .5;
 	position: absolute;
 	bottom: 0;
+	transform-origin: bottom;
+	/transform: scale(.8);
 	width: 100%;
 }
 .slide-content > figure figcaption {
 	position: absolute;
 	bottom: 10%;
-	right: 20%;
-	font-size: 13px;
-	border: 1px solid green;
+	right: 10%;
+	font-size: 20px;
 	color: white;
 }
 
@@ -326,4 +366,36 @@ p {
 }
 .booked-tickets-total .count {
 	color: var(--red);
+}
+.slider-control {
+	position: absolute;
+	left: 0;
+	top: 45%;
+	z-index: 3;
+	background: var(--light-blue);
+	background-size: cover;
+	background-position: center;
+	display: inline-block;
+	border: none;
+	width: 50px;
+	height: 50px;
+	opacity: 1;
+	transition: all 0.5s;
+	cursor: pointer;
+}
+.slider-control.left {
+	background-image: url("../img/arrow-left.png");
+}
+.slider-control.right {
+	left: auto;
+	right: 0;
+	background-image: url("../img/arrow-right.png");
+
+}
+.live-stamp {
+	position: relative;
+	top: -20px;
+	left: 40px;
+	opacity: .8;
+	transform: scale(.6) rotate(-30deg);
 }
