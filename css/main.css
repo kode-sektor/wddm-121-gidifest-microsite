@@ -351,7 +351,8 @@ address {
 	position: absolute;
 	top: 20%;
 	left: 0;
-	width: 50%;
+	min-width: 50%;
+	text-align: center
 	border: thin solid purple;
 }
 .slide-content .cta-btn {
@@ -603,6 +604,7 @@ address {
 }
 .artiste-inner {
 	background-color: #EBEFF2;
+	padding-bottom: 50px;
 }
 .artiste-collection header {
 	position: relative;
@@ -628,8 +630,13 @@ address {
 .artistes {
 	display: flex;
 	width: 70%;
+	margin-left: 10%;
 	overflow: hidden;
-	border: 1px solid green;
+}
+.slide-area:nth-of-type(even) .artistes {
+	direction: rtl;
+	margin-left: auto;
+	margin-right: 10%;
 }
 .progress {
     margin:20px 0;
@@ -665,7 +672,12 @@ address {
 	align-items: center;
 	min-width: 40%;
 	padding: 20px 10px;
+	margin-bottom: 2em;
 }
+/*.artiste-controls:nth-of-type(even) {
+	direction: rtl;
+	margin-left: auto;
+}*/
 .artiste-controls .progress {
 	margin-right: 50px;
 }
@@ -674,7 +686,7 @@ address {
 }
 .artiste-controls  .slide-counter li {
 	display: inline-block;
-	margin-right: 5px;
+	margin-right: 15px;
 }
 .artistes > li {
 	flex: 0 0 100%;
@@ -686,13 +698,19 @@ address {
 .artistes > li > ul > li {
 	flex-basis: 33.33%;
 	height: 300px;
-	border: 2px solid pink;
 }
 .artistes > li > ul > li figure {
 	height: inherit;
 	width: inherit;
+	border: none;
 	background-repeat: no-repeat;
 	background-size: cover;
+	transition: all .3s ease-out;
+}
+.artistes > li > ul > li:hover figure {
+	transform: rotate(360deg);
+	opacity: .7;
+	outline: 2px solid black;
 }
 
 .profile-link {
@@ -714,7 +732,7 @@ figure.kizz {
 
 figure.korede {
 	background-image: url(../img/artistes/korede-grad.png);
-	background-position: 20px center;
+	background-position: center;
 }
 figure.madrina {
 	background-image: url(../img/artistes/cynthia-grad.png);
@@ -728,6 +746,46 @@ figure.tu-face {
 	background-image: url(../img/artistes/2face-grad.png);
 	background-position: -120px center;
 }
+figure.flavour {
+	background-image: url(../img/artistes/flavour-grad.png);
+}
+figure.eva {
+	background-image: url(../img/artistes/alordiah-grad.png);
+}
+figure.ycee {
+	background-image: url(../img/artistes/ycee-grad.png);
+}
+figure.patoranking {
+	background-image: url(../img/artistes/patoranking-grad.png);
+}
+figure.madrina {
+	background-image: url(../img/artistes/cynthia-grad.png);
+}
+figure.runtown {
+	background-image: url(../img/artistes/runtown-grad.png);
+}
+figure.wizkid {
+	background-image: url(../img/artistes/wizkid-grad.png);
+}
+figure.simi {
+	background-image: url(../img/artistes/simi-grad.png);
+	background-position: -60px center;
+}
+figure.burna {
+	background-image: url(../img/artistes/burna-grad.png);
+}
+figure.timaya {
+	background-image: url(../img/artistes/timaya-grad.png);
+}
+figure.davido {
+	background-image: url(../img/artistes/davido.jpg);
+}
+figure.tiwa {
+	background-image: url(../img/artistes/tiwa-savage-grad.png);
+}
+
+
+
 
 .artistes figcaption {
 	position: absolute;
@@ -736,6 +794,10 @@ figure.tu-face {
 	margin: 0 auto;
 	padding-left: 40px;
 	color: white;
+}
+.slide-area:nth-of-type(even) .artistes figcaption {
+	padding-left: 0;
+	padding-right: 40px;
 }
 .artistes figcaption .order {
 	display: inline-block;
@@ -753,4 +815,54 @@ figure.tu-face {
 .artistes figcaption .label {
 	font-size: 0.9em;
 	opacity: .5;
+}
+.slide-counter .current {
+	transform: scale(2);
+	color: var(--purple);
+}
+
+.artiste-inner button {
+	position: relative;
+	top: auto !important;
+	left: auto !important;
+	right:  auto !important;
+	bottom: 170px !important;
+	border: 1px solid var(--dark-purple);
+	background-color: transparent; 
+}
+
+.artiste-inner button.alternate {
+	direction: rtl;
+	left: 90.5% !important;
+}
+.slide-area {
+	position: relative;
+}
+.slide-area .details {
+	position: absolute;
+	right: 60px;
+	bottom: 290px;
+	text-align: center;
+}
+.slide-area:nth-of-type(even) .details {
+	right: auto;
+	left: 40px;
+}
+.genre {
+	font-size: 1.4em;
+	font-weight: bolder;
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+.remarks {
+	margin-left: 50px;
+}
+.remarks p {
+	font-weight: bold;
+}
+.remarks p:nth-of-type(2) {
+	margin-bottom: 20px;
+}
+.remarks p:nth-of-type(3) {
+	font-size: .9em;
 }
