@@ -485,7 +485,6 @@ address {
     background-image: url(../img/concert-bg.jpg);
     text-align: center;
     padding: 50px;
-    padding-bottom: 50px;
 }
 .concert:before {
 	content: "";
@@ -531,12 +530,22 @@ address {
 
     padding: 1.25rem;
 }
+.card-img-overlay:before {
+	position: absolute;
+	content: "";
+	left: 30px;
+	top: 10px;
+	width: 60%;
+	border: 2px solid rgba(250,250,250,.3);
+}
+
 .concert-list .card p {
 	position: relative;
 	right: 200px;
 	font-size: 1.6em;
+	font-weight: bolder;
 	top: -50px;
-	opacity: .5;
+	color: var(--purple);
     text-transform: uppercase;
 }
 .concert-list .card hr {
@@ -573,4 +582,175 @@ address {
 }
 .concert .video-window {
 	width: 100%;
+}
+
+.artiste-collection {
+	position: relative;
+	width: 100%;
+	min-height: 450px;
+	margin-top: 50px;
+	padding: 80px 50px;
+}
+.artiste-collection:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 250px;
+	height: 200px;
+	background: black;
+	z-index: -1;
+}
+.artiste-inner {
+	background-color: #EBEFF2;
+}
+.artiste-collection header {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 30px;
+	padding: 20px;
+	z-index: 20;
+	border: 2px solid red;
+}
+.logo-container {
+	width: 75px;
+	height: 75px;
+}
+.live .fa-dot-circle-o {
+	color : var(--red);
+}
+.live .text {
+	font-weight: bold;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+.artistes {
+	display: flex;
+	width: 70%;
+	overflow: hidden;
+	border: 1px solid green;
+}
+.progress {
+    margin:20px 0;
+    padding:0;
+    width:200px;
+    height:3px;
+    overflow:hidden;
+    background:#e5e5e5;
+    border-radius:6px;
+}
+
+.bar {
+	position:relative;
+    float:left;
+    min-width:1%;
+    width: 50%;
+    height:100%;
+    background: var(--red);
+}
+
+.percent {
+	position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    margin:0;
+    font-family:tahoma,arial,helvetica;
+    font-size:12px;
+    color:white;
+}
+.artiste-controls {
+	display: flex;
+	align-items: center;
+	min-width: 40%;
+	padding: 20px 10px;
+}
+.artiste-controls .progress {
+	margin-right: 50px;
+}
+.artiste-controls  .slide-counter {
+	display: inline-block;
+}
+.artiste-controls  .slide-counter li {
+	display: inline-block;
+	margin-right: 5px;
+}
+.artistes > li {
+	flex: 0 0 100%;
+}
+.artistes > li > ul {
+	display: flex;
+	width: 100%;
+}
+.artistes > li > ul > li {
+	flex-basis: 33.33%;
+	height: 300px;
+	border: 2px solid pink;
+}
+.artistes > li > ul > li figure {
+	height: inherit;
+	width: inherit;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.profile-link {
+	display: block;
+	position: relative;
+	width: inherit;
+	height: inherit;
+}
+figure.dbanj {
+	background-image: url(../img/artistes/dbanj-grad.png);
+}
+figure.banky {
+	background-image: url(../img/artistes/banky-grad.png);
+	background-position: -120px center;
+}
+figure.kizz {
+	background-image: url(../img/artistes/kizz-daniel.png);
+}
+
+figure.korede {
+	background-image: url(../img/artistes/korede-grad.png);
+	background-position: 20px center;
+}
+figure.madrina {
+	background-image: url(../img/artistes/cynthia-grad.png);
+	background-position: -120px center;
+}
+figure.olamide {
+	background-image: url(../img/artistes/olamide-grad.png);
+}
+
+figure.tu-face {
+	background-image: url(../img/artistes/2face-grad.png);
+	background-position: -120px center;
+}
+
+.artistes figcaption {
+	position: absolute;
+	top: 155px;
+	width: 70%;
+	margin: 0 auto;
+	padding-left: 40px;
+	color: white;
+}
+.artistes figcaption .order {
+	display: inline-block;
+	padding: 10px;
+	background-color: rgba(26, 10, 56,.5);
+	border: 1px solid rgba(255,255,255,.3);
+	border-radius: 50%;
+	margin-bottom: 4px;
+}
+
+.artistes figcaption strong {
+	font-size: 1.4em;
+	font-weight: bolder;
+}
+.artistes figcaption .label {
+	font-size: 0.9em;
+	opacity: .5;
 }
