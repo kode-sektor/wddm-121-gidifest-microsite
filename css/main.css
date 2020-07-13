@@ -866,3 +866,122 @@ figure.tiwa {
 .remarks p:nth-of-type(3) {
 	font-size: .9em;
 }
+
+/*FOOTER*/
+.page-footer {
+	width: 100%;
+	background-color: black;
+	padding: 50px
+}
+.page-footer > section {
+	width: 80%;
+	margin: 20px auto;
+	padding: 30px;
+	border: 2px solid var(--dark-purple);
+}
+.page-footer > section > ul, .page-footer .legal {
+	display: flex;
+	justify-content: space-between;
+}
+.page-footer .logo {
+	width: 100px;
+}
+.legal > ul > li {
+	margin-right: 10px;
+}
+.legal > ul > li a {
+	color: white;
+}
+
+
+/*PROFILE*/
+
+.profile .page-header {
+	/background: none;
+	padding: 0;
+}
+.profile .main-nav-bar {
+	padding: 5px 70px;
+}
+.profile .inner-header:before {
+	display: none;
+}
+.profile .hero {
+	padding-left: 0;
+	padding-bottom: 40px;
+	width: 100%;
+	background: url(../img/artistes/act-bg.jpg) no-repeat;
+
+}
+.profile .hero:before, .profile .hero:after {
+	display: none;
+}
+.profile .main-nav-bar{
+	margin-bottom: 30px;
+}
+.star-act {
+	display: flex;
+	justify-content: space-between;
+	width: 90%;
+	margin: auto;
+	padding: 30px;
+	background: rgba(255,255,255,.3);
+	border: 2px solid black;
+}
+.bio{
+	color: white;
+}
+.act {
+	flex: 1 1 70%;
+	padding: 20px;
+}
+.act-links {
+	flex: 1 1 30%;
+	padding: 20px;
+}
+.act-links .fa {
+	margin-right: 10px;
+}
+.act-links > ul > li a {
+	display: block;
+	padding: 10px 5px;
+	color: var(--blue);
+	font-weight: bolder;
+	font-size: 1.3em;
+}
+.act > figure {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 25px;
+}
+.act > figure .img-holder {
+	flex: 1 1 40%;
+	border: 2px solid chocolate;
+}
+.act > figure figcaption {
+	flex: 1 1 60%;
+	padding: 10px 5px 15px 25px;
+	color: white;
+	opacity: .9;
+}
+.act > figure figcaption span, .act > figure figcaption b {
+	display: block;
+}
+.act > figure figcaption span, .act > figure figcaption b {
+	margin-bottom: 15px;
+}
+.act > figure figcaption .name {
+	font-size: 1.4em;
+}
+.act > figure figcaption b {
+	margin-top: 15px;
+	font-size: 1.6em;
+}
+.act > figure figcaption .performer-rating {
+	font-size: .8em;
+}
+
+.bio {
+	line-height: 23px;
+}
+
