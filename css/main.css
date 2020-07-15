@@ -675,10 +675,11 @@ address {
 	padding: 20px 10px;
 	margin-bottom: 2em;
 }
-/*.artiste-controls:nth-of-type(even) {
-	direction: rtl;
-	margin-left: auto;
-}*/
+.slide-area:nth-of-type(even) .artiste-controls {
+	/*direction: rtl;
+	margin-left: auto;*/
+	justify-content: flex-end;
+}
 .artiste-controls .progress {
 	margin-right: 50px;
 }
@@ -986,7 +987,8 @@ figure.tiwa {
 	background: none;
 	border: 3px outset var(--dark-purple);
 	text-transform: uppercase;
-	background: rgba(255,255,255,.2);
+	width: 308px;
+	background: black;
 }
 .act .cta-btn:hover, .act .cta-btn:focus {
  }
@@ -1116,6 +1118,11 @@ figure.tiwa {
 	height: 100vh;
 	border: 1px solid white;
 	background: rgba(0,0,0,.95);
+	transform-origin: top right;
+	transform: rotate(-90deg);
+}
+.ticket-modal.swing {
+	animation: swingModal .5s ease-in forwards;
 }
 .ticket {
     display: block;
@@ -1130,7 +1137,7 @@ figure.tiwa {
 }
 .form-group label {
 	display: block;
-	margin-bottom: 10px;
+	margin-bottom: 1px;
 	font-size: 1.1em;
 	text-transform: uppercase;
 	color: var(--red);
@@ -1192,4 +1199,21 @@ input[type=submit]:hover, input[type=submit]:focus {
 }
 .ticket-close:hover, .ticket-close:focus {
 	color: var(--red)
+}
+
+/*ANMIATION*/
+
+@keyframes swingModal {
+	0% {
+
+	}
+	30% {
+		transform: rotate(10deg);
+	}
+	60% {
+		transform: rotate(-5deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
 }

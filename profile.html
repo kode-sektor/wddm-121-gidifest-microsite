@@ -99,7 +99,7 @@
                                     </figcaption>
                                 </figure>
 
-                                <a class="ticket-link cta-btn" href="">Purchase Wizkid's Ticket Now!</a>
+                                <a class="ticket-link cta-btn" href="#">Purchase Wizkid's Ticket Now!</a>
 
                                 <article class="bio">
 
@@ -142,12 +142,14 @@
                         <header>
                             <h2>Top-Rated Performances</h2>
                             <h3>GIDIFEST 2018 PREMIUM</h3>
-                            <span class="avg-rating">Average Rating: <span class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </span></span>    
+                            <span class="avg-rating">Average Rating: 
+                                <span class="rating">
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </span>
+                            </span>    
                         </header>
                         
                         <article class="review-posts">
@@ -200,20 +202,20 @@
                         <figure>
                             <img src="img/profile/wizkid.jpg">
                         </figure>
-                        <a class="ticket-link cta-btn" href="">Purchase Wizkid's Ticket Now!</a>
+                        <a class="ticket-link cta-btn" href="#">Purchase Wizkid's Ticket Now!</a>
                     </section>
                 </section>
 
             </main>
 
-            <section class="ticket-modal">
+            <section id="ticket-modal-container" class="ticket-modal">
 
-                <span class="ticket-close fa fa-close"></span>
+                <span id="ticket-close" class="ticket-close fa fa-close"></span>
 
                 <form action="" class="ticket">
                     <div class="form-group">
                         <label for="name">First Name</label>
-                        <input id="name" name="name" type="text" class="ticket-input">
+                        <input id="name" name="name" type="text" class="ticket-input" autofocus>
                     </div>
                     <div class="form-group">
                         <label for="last-name">Last Name</label>
@@ -226,6 +228,10 @@
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input id="email" type="email" class="ticket-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="seats">Seats</label>
+                        <input id="seats" type="number" value="1" class="ticket-input">
                     </div>
                     <div class="form-group">
                         <label for="country-origin">TICKET</label>
