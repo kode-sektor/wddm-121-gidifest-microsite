@@ -907,14 +907,23 @@ figure.tiwa {
 	display: none;
 }
 .profile .hero {
+	position: relative;
 	padding-left: 0;
 	padding-bottom: 40px;
 	width: 100%;
-	background: url(../img/artistes/act-bg.jpg) no-repeat;
-
+	background: url(../img/act-bg.jpg) no-repeat;
 }
-.profile .hero:before, .profile .hero:after {
+.profile .hero:before, .profile .hero:after{
 	display: none;
+}
+.profile .hero:after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: rgba(238, 16, 16, 0.31);
+	z-index: -1;
 }
 .profile .main-nav-bar{
 	margin-bottom: 30px;
@@ -926,7 +935,7 @@ figure.tiwa {
 	margin: auto;
 	padding: 30px;
 	background: rgba(255,255,255,.3);
-	border: 2px solid black;
+	border: 1px solid white;
 }
 .bio{
 	color: white;
@@ -956,7 +965,7 @@ figure.tiwa {
 }
 .act > figure .img-holder {
 	flex: 1 1 40%;
-	border: 2px solid chocolate;
+	border: thin solid rgba(0, 0, 0, 0.25);
 }
 .act > figure figcaption {
 	flex: 1 1 60%;
@@ -983,5 +992,30 @@ figure.tiwa {
 
 .bio {
 	line-height: 23px;
+	padding: 20px;
+	background: rgba(26, 10, 56, 0.75);
 }
 
+
+/*BIO-EXTRA*/
+
+.bio-extra {
+	display: flex;
+	align-items: center;
+	width: 80%;
+	margin: 0 auto;
+}
+.bio-extra > * {
+	flex: 0 0 50%;
+}
+.reviews {
+	padding: 20px;
+	border: thin solid green;
+}
+.reviews h3 {
+	letter-spacing: 2px;
+	color: var(--red);
+	text-transform: uppercase;
+	font-size: 10px;
+	text-transform: uppercase;
+}
