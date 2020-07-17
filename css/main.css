@@ -5,8 +5,7 @@
 *	Author: Kay 
 *	Author Email: investorkay@gmail.com
 *	Author URI: www.codeslave.com 
-*   Start date: 1-18-2017
-
+*   Start date: 2020-07-16
 
  
  __   __   												
@@ -692,6 +691,21 @@ address {
 }
 .artistes > li {
 	flex: 0 0 100%;
+	position: relative;
+	transform: translateX(0);
+	transition: transform .5s ease-in-out;
+}
+.artistes > li.slide-right {
+	transform: translateX(-100%);
+}
+.artistes > li.slide-left {
+	transform: translateX(0%);
+}
+.slide-area:nth-of-type(even) .artistes > li.slide-right {
+	transform: translateX(100%);
+}
+.slide-area:nth-of-type(even) .artistes > li.slide-left {
+	transform: translateX(0%);
 }
 .artistes > li > ul {
 	display: flex;
@@ -771,7 +785,7 @@ figure.wizkid {
 }
 figure.simi {
 	background-image: url(../img/artistes/simi-grad.png);
-	background-position: -60px center;
+	background-position: -80px center;
 }
 figure.burna {
 	background-image: url(../img/artistes/burna-grad.png);
@@ -781,10 +795,13 @@ figure.timaya {
 }
 figure.davido {
 	background-image: url(../img/artistes/davido.jpg);
+	background-position: -150px center;
 }
 figure.tiwa {
 	background-image: url(../img/artistes/tiwa-savage-grad.png);
+	background-position: -60px center;
 }
+
 
 
 
@@ -867,6 +884,9 @@ figure.tiwa {
 }
 .remarks p:nth-of-type(3) {
 	font-size: .9em;
+	text-transform: uppercase;
+	color: black;
+	font-family: var(--font-tertiary);
 }
 
 /*FOOTER*/
@@ -952,6 +972,10 @@ figure.tiwa {
 	flex: 1 1 30%;
 	padding: 20px;
 }
+.act-links > ul {
+	padding-left: 30px;
+	border-left: 2px solid var(--purple);
+}
 .act-links .fa {
 	margin-right: 10px;
 }
@@ -959,6 +983,7 @@ figure.tiwa {
 	display: block;
 	padding: 10px 5px;
 	color: var(--blue);
+	color: black;
 	font-weight: bolder;
 	font-size: 1.3em;
 }
