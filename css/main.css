@@ -223,6 +223,7 @@ address {
 	right: 50px;
 	height: 100%;
 	border: thin solid rgba(250, 250, 250, .1);
+	z-index: 5;
 }
 .hero:after {
 	position: absolute;
@@ -551,8 +552,8 @@ address {
 }
 .concert-list li {
 	position: relative;
-	flex: 0 0 25%;
-	max-width: 25%;
+	flex: 0 0 100%;
+	max-width: 100%;
 	color: white;
 }
 .concert-list .featured {
