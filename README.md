@@ -1,4 +1,4 @@
-GitHub Link: 
+GitHub Link: https://kode-sektor.github.io/wddm-121-gidifest-microsite/index.html
 
 # wddm-121-gidifest-microsite
 wddm-121-gidifest-microsite
