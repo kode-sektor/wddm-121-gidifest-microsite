@@ -22,6 +22,10 @@
 		max-width: 50%;
 		color: white;
 	}
+
+	.artiste-collection {
+		padding: 80px 50px;
+	}
 }
 
 @media (min-width: 62rem) {
@@ -71,6 +75,26 @@
     	flex: 0 0 25%;
     	max-width: 25%;
     	color: white;
+    }
+
+    .artistes {
+    	width: 70%;
+    	margin-left: 10%;
+    }
+    .artiste-inner button {
+    	background-color: transparent; 
+    }
+    .artiste-inner button.alternate {
+    	left: 90% !important;
+    }
+    .artistes {
+    	padding-top: 0;
+    }
+    .slide-area .details {
+    	bottom: 290px;
+    }
+    .artiste-controls {
+    	padding: 20px 10px;
     }
 }
 
