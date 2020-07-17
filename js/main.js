@@ -4,6 +4,8 @@
 const homePage = document.querySelectorAll('#home');
 const profilePage = document.querySelectorAll('#profile');
 
+const slideBtns = document.querySelectorAll('.hero .slider-control');
+
 
 // Target specific page
 if (homePage.length > 0) {
@@ -42,6 +44,13 @@ if (homePage.length > 0) {
 
 				// Set current slider gauge
 				document.querySelector(`#${sliderID}`).querySelector('.artiste-controls .bar').style.width = '100%';
+			} else {
+				// Target only the nav controls in Hero section
+				// Style background of buttons to red when right is clicked
+				slideBtns.forEach((btn) => {
+					btn.classList.add('slide');
+				});
+
 			}
 			
 
@@ -60,6 +69,12 @@ if (homePage.length > 0) {
 
 				// Set current slider gauge
 				document.querySelector(`#${sliderID}`).querySelector('.artiste-controls .bar').style.width = '50%';
+			} else {
+				// Target only the nav controls in Hero section
+				// Style background of buttons to red when right is clicked
+				slideBtns.forEach((btn) => {
+					btn.classList.remove('slide');
+				});
 			}
 		}
 	
@@ -83,7 +98,6 @@ if (homePage.length > 0) {
 	sliderBtn.forEach((control) => {	// loop across
 		control.addEventListener('click', (e) => {	// listen for click event
 			slider(e, 'artiste-collection');
-
 		});	
 	});
 
@@ -128,3 +142,13 @@ if (profilePage.length > 0) {
 	});
 
 }
+
+/*ALL PAGES*/
+
+const toggleBtn = document.querySelector('.mobile-nav-btn');
+const nav = document.querySelector('.main-nav-links');
+
+// Listen to click of 'toggle' button and add class that toggles nav opacity
+toggleBtn.addEventListener('click', (e) => {
+	nav.classList.toggle('reveal');
+});

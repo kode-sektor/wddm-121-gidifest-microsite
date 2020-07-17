@@ -22,6 +22,22 @@
 		max-width: 50%;
 		color: white;
 	}
+	.cta-btn {
+		font-size: 1.2em;
+	}
+	.main-nav-links {
+		justify-content: space-around;
+		display: flex;
+
+		flex-flow: row;
+		position: static;
+		z-index: 0;
+		right: auto;
+		top: auto;
+		min-width: none;
+		background: transparent;
+	}
+
 
 	.artiste-collection {
 		padding: 80px 50px;
@@ -42,6 +58,9 @@
 	}
 	.slide-content > figure figcaption .caption-score {
 		opacity: .3;
+	}
+	.cta-btn {
+		font-size: 1.3em;
 	}
 
 	.gidi-intro {

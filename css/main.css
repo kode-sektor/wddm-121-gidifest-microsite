@@ -250,9 +250,23 @@ address {
 .main-nav-links {
 	justify-content: space-around;
 	display: none;
+
+	flex-flow: column;
+	position: fixed;
+	z-index: 99;
+	right: 50px;
+	top: 100px;
+	min-width: 300px;
+	background: rgba(13, 10, 17, 0.86);
+}
+.main-nav-links.reveal {
+	display: flex;
 }
 .main-nav-links li {
 	padding: 0 12.5px;
+
+	padding: 20px;
+	text-align: center;
 }
 .main-nav-links li a {
 	display: block;
@@ -274,6 +288,8 @@ address {
 	-webkit-appearance: none;
 	border: 0;
 	padding: 5px 10px;
+	cursor: pointer;
+	z-index: 100;
 }
 .poster-slider {
 	display: flex;
@@ -408,9 +424,9 @@ address {
 	margin-bottom: 15px;
 	padding: 12.5px 15px;
 	background-color: rgba(238, 16, 16, .7);
-	font-size: 1.3em;
+	font-size: 1.1em;
 	color: white;
-	text-align: center
+	text-align: center;
 	font-weight: bolder;
 	transition: all .3s;
 }
@@ -442,6 +458,10 @@ address {
 	transition: all 0.5s;
 	cursor: pointer;
 }
+.slider-control.slide {
+	background-color: var(--red);
+}
+
 .slider-control.left {
 	background-image: url("../img/arrow-left.png");
 }
@@ -632,6 +652,7 @@ address {
 }
 .concert .video-window {
 	width: 100%;
+	height: 250px;
 }
 
 .artiste-collection {
