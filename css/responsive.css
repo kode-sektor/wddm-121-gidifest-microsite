@@ -26,27 +26,41 @@
 	.slide-content > figure {
 		width: 50%;
 	}
+	.slide-content > figure figcaption .caption-score {
+		opacity: .3;
+	}
+
+	.gidi-intro {
+		width: 75%;
+		margin: 50px auto 75px;
+	}
+	.contact-box-overlay {
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	}
+	.contact-box {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	    display: inline-block;
+	    max-width: 582px;
+	    padding: 40px 55px 40px 55px;
+	    color: var(--light-grey);
+	    text-align: center;
+	    background: rgba(26, 10, 56, .8);
+	}
+	.african-tiled-art .card-img {
+		display: block;
+	}
     
 }
 
 @media (min-width: 75rem) {
 	.hero {
 		width: 75%;
-	}
-	.hero:before {
-		position: absolute;
-		content: "";
-		right: 50px;
-		height: 100%;
-		border: thin solid rgba(250, 250, 250, .1);
-	}
-	.hero:after {
-		position: absolute;
-		content: "";
-		bottom: -2px;
-		right: 0px;
-		width: 60%;
-		border: 2px solid var(--red);
 	}
     .caption .name {
     	font-size: 3.5em;

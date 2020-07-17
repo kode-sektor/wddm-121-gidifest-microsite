@@ -217,6 +217,21 @@ address {
 	margin: auto;
 	background-color: black;
 }
+.hero:before {
+	position: absolute;
+	content: "";
+	right: 50px;
+	height: 100%;
+	border: thin solid rgba(250, 250, 250, .1);
+}
+.hero:after {
+	position: absolute;
+	content: "";
+	bottom: -2px;
+	right: 0px;
+	width: 60%;
+	border: 2px solid var(--red);
+}
 .main-nav-bar, .main-nav-links, .social-links {
 	display: flex;
 }
@@ -378,7 +393,7 @@ address {
 	right: 300%;
 	font-size: 10em;
 	transform: rotate(270deg);
-	opacity: .3;
+	opacity: 0;
 	font-family: var(--font-secondary);
 }
 .slide-content .cta {
@@ -390,8 +405,9 @@ address {
 .cta-btn {
 	display: inline-block;
 	margin-bottom: 15px;
-	padding: 10px 15px;
+	padding: 12.5px 15px;
 	background-color: rgba(238, 16, 16, .7);
+	font-size: 1.3em;
 	color: white;
 	text-align: center
 	font-weight: bolder;
@@ -448,7 +464,7 @@ address {
  	padding: 56px 0;
  }
 .gidi-intro {
-	width: 75%;
+	width: 100%;
 	margin: 50px auto 75px;
 }
 .african-tiled-art, .card {
@@ -461,26 +477,19 @@ address {
 	border: 1px solid rgba(0,0,0,.125);
 	height: 100%;
 }
-.card-img {
+.african-tiled-art .card-img {
+	display: none;
     width: 100%;
     height: 100%
 }
 .contact-box-overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
     padding: 1.25rem;
 }
 .contact-box {
     display: inline-block;
-    max-width: 582px;
-    padding: 40px 55px 40px 55px;
-    position: absolute;
-    left: 0;
+    max-width: 100%;
+    padding: 30px;
     color: var(--light-grey);
-    bottom: 0;
     text-align: center;
     background: rgba(26, 10, 56, .8);
 }
@@ -547,14 +556,15 @@ address {
 	color: white;
 }
 .concert-list .featured {
-	flex: 0 0 50%;
-	max-width: 50%;
+	flex: 0 0 100%;
+	max-width: 100%;
 }
 .concert-list .featured .card {
 	height: 435px;
 }
 .concert-list .card-img {
 	width: 100%;
+	height: 100%;
 }
 .card-img-overlay {
     position: absolute;
