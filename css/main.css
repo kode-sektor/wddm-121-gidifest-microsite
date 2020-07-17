@@ -205,7 +205,7 @@ address {
 .inner-header:before {
 	position: absolute;
 	content: "";
-	top: 40px;
+	top: 54px;
 	width: 100%;
 	height: 148px;
 	background-color: var(--light-blue);
@@ -436,11 +436,12 @@ address {
 }
 .booked-tickets-total {
 	margin-left: 10px;
-	font-size: .9em;
+	font-size: 1em;
 	color: white;
 }
 .booked-tickets-total .count {
 	color: var(--red);
+	font-weight: 900;
 }
 .slider-control {
 	position: absolute;
@@ -962,7 +963,7 @@ figure.tiwa {
 .page-footer {
 	width: 100%;
 	background-color: black;
-	padding: 50px
+	padding: 50px 0;
 }
 .page-footer > section {
 	width: 80%;
@@ -1006,7 +1007,8 @@ figure.tiwa {
 	padding-left: 0;
 	padding-bottom: 40px;
 	width: 100%;
-	background: url(../img/act-bg.jpg) no-repeat;
+	background: url(../img/act-bg-2.jpg) no-repeat;
+	background-size: cover;
 }
 .profile .hero:before, .profile .hero:after{
 	display: none;
@@ -1028,6 +1030,7 @@ figure.tiwa {
 .star-act {
 	display: flex;
 	justify-content: space-between;
+	flex-flow: column;
 	width: 90%;
 	margin: auto;
 	padding: 30px;
@@ -1040,14 +1043,15 @@ figure.tiwa {
 .act {
 	flex: 1 1 70%;
 	padding: 20px;
+	text-align: center;
 }
 .act-links {
 	flex: 1 1 30%;
 	padding: 20px;
 }
 .act-links > ul {
-	padding-left: 30px;
-	border-left: 2px solid var(--purple);
+	padding-top: 30px;
+	border-top: 2px solid var(--purple);
 }
 .act-links .fa {
 	margin-right: 10px;
@@ -1062,12 +1066,12 @@ figure.tiwa {
 }
 .act > figure {
 	display: flex;
+	flex-flow: column;
 	justify-content: space-between;
 	margin-bottom: 25px;
 }
 .act > figure .img-holder {
 	flex: 1 1 40%;
-	border: thin solid rgba(0, 0, 0, 0.25);
 }
 .act > figure figcaption {
 	flex: 1 1 60%;
@@ -1086,6 +1090,7 @@ figure.tiwa {
 	border: 3px outset var(--dark-purple);
 	text-transform: uppercase;
 	width: 308px;
+	font-size: 1.0em;
 	background: black;
 }
 .act .cta-btn:hover, .act .cta-btn:focus {
@@ -1105,7 +1110,7 @@ figure.tiwa {
 .bio {
 	line-height: 23px;
 	padding: 20px;
-	background: rgba(26, 10, 56, 0.75);
+	background: rgba(238, 16, 16, 0.7);
 }
 
 
@@ -1113,6 +1118,7 @@ figure.tiwa {
 
 .bio-extra {
 	display: flex;
+	flex-flow: column-reverse;
 	width: 80%;
 	margin: 0 auto;
 	background: rgba(239, 239, 239, .1);
@@ -1129,7 +1135,7 @@ figure.tiwa {
 	margin-bottom: 20px;
 }
 .reviews h2 {
-	font-size: 58px;
+	font-size: 38px;
 	text-transform: uppercase;
 	color: var(--dark-purple);
 }

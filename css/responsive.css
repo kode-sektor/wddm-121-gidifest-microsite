@@ -38,13 +38,39 @@
 		background: transparent;
 	}
 
-
 	.artiste-collection {
 		padding: 80px 50px;
 	}
 
 	.page-footer > section > ul, .page-footer .legal {
 		flex-direction: row;
+	}
+	.page-footer {
+		padding: 50px
+	}
+
+	.star-act {
+		flex-flow: row;
+	}
+	.act {
+		text-align: left;
+	}
+	.act-links > ul {
+		padding-left: 30px;
+		padding-top: 0;
+		border-left: 2px solid var(--purple);
+		border-top: none;
+	}
+	.act > figure {
+		display: flex;
+		flex-flow: row;
+	}
+
+	.bio-extra {
+		flex-flow: row;
+	}
+	.reviews h2 {
+		font-size: 48px;
 	}
 }
 
@@ -118,6 +144,10 @@
     }
     .artiste-controls {
     	padding: 20px 10px;
+    }
+
+    .reviews h2 {
+    	font-size: 58px;
     }
 }
 

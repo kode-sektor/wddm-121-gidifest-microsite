@@ -145,8 +145,8 @@ if (profilePage.length > 0) {
 
 /*ALL PAGES*/
 
-const toggleBtn = document.querySelector('.mobile-nav-btn');
-const nav = document.querySelector('.main-nav-links');
+const toggleBtn = document.querySelector('.mobile-nav-btn');	// mobile button
+const nav = document.querySelector('.main-nav-links');	// the navigation menu
 
 // Listen to click of 'toggle' button and add class that toggles nav opacity
 toggleBtn.addEventListener('click', (e) => {
