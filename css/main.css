@@ -951,13 +951,17 @@ figure.tiwa {
 }
 .page-footer > section > ul, .page-footer .legal {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
+	padding: 10px;
 }
 .page-footer .logo {
 	width: 100px;
+	padding: 10px;
 }
 .legal > ul > li {
 	margin-right: 10px;
+	padding: 10px;
 }
 .legal > ul > li a {
 	color: white;
