@@ -199,6 +199,8 @@ address {
 .inner-header {
 	position: relative;
 	width: 100%;
+	background: url(../img/grid-white.png) no-repeat bottom left;
+	background-size: 200px;
 }
 .inner-header:before {
 	position: absolute;
@@ -262,6 +264,23 @@ address {
 	font-size: 1.3em;
 	color: var(--link);
 }
+.poster-slider {
+	display: flex;
+	flex-flow: nowrap;
+	overflow: hidden;
+}
+.poster-slider > .poster {
+	flex: 0 0 100%;
+	position: relative;
+	transform: translateX(0);
+	transition: transform .5s ease-in-out;
+}
+.poster-slider > .poster.slide-right {
+	transform: translateX(-100%);
+}
+.poster-slider > .poster.slide-left {
+	transform: translateX(0%);
+}
 .fa-search {
 	color: white;
 	font-size: 1.3em !important;
@@ -272,21 +291,17 @@ address {
 	display: flex;
 	width: 100%;
 }
-.poster:before {
-	position: absolute;
-	content: "";
-	right: 0;
-	bottom: 0;
-	height: 150px;
-	border: thin solid rgba(250, 250, 250, .5);
-}
 .caption {
 	flex: 0 0 20%;
 	position: relative;
+	width: 20%;
 	z-index: 1;
 	padding-top: 80px;
 	text-align: center;
 	background: var(--light-blue);
+}
+.poster-slider > .poster:last-child .caption {
+	background: var(--red);
 }
 .caption span, .caption strong {
 	display: block;
@@ -311,8 +326,7 @@ address {
 .slider {
 	flex: 0 0 80%;
 	position: relative;
-	padding-right: 90px;
-	background-image: url(../img/backdrop.png);
+	background: url(../img/concert-bg-2.jpg) no-repeat;
 	background-size: cover;
 	background-clip: content-box;
 }
@@ -323,7 +337,16 @@ address {
 	z-index: 2;
 	width: 100%;
 	height: 100%;
-	background: rgba(0,0,0,.3);
+	margin-right: -100px;
+	background: rgba(0,0,0,.4);
+}
+.slide-content:before {
+	position: absolute;
+	content: "";
+	right: 0;
+	bottom: 0;
+	height: 150px;
+	border: 2px solid var(--red);
 }
 .slide-content > figure {
 	position: relative;
@@ -347,8 +370,23 @@ address {
 	right: 10%;
 	font-size: 20px;
 	color: white;
+	text-align: center;
 }
-
+.slide-content > figure figcaption .caption-rating {
+	position: absolute;
+	bottom: 180px;
+	font-size: 1.2em;
+	opacity: .4;
+}
+.slide-content > figure figcaption .caption-score {
+	position: absolute;
+	bottom: 50px;
+	right: 300%;
+	font-size: 10em;
+	transform: rotate(270deg);
+	opacity: .3;
+	font-family: var(--font-secondary);
+}
 .slide-content .cta {
 	position: absolute;
 	top: 20%;
@@ -363,6 +401,11 @@ address {
 	color: white;
 	text-align: center
 	font-weight: bolder;
+	transition: all .3s;
+}
+.slide-content .cta-btn:hover, .slide-content .cta-btn:focus {
+	color: white !important;
+	outline: thin solid white;
 }
 .booked-tickets-total {
 	margin-left: 10px;
@@ -399,10 +442,10 @@ address {
 }
 .live-stamp {
 	position: relative;
-	top: -20px;
+	top: -40px;
 	left: 40px;
-	opacity: .8;
-	transform: scale(.6) rotate(-30deg);
+	opacity: .2;
+	transform: scale(.7) rotate(-30deg);
 }
 
 /*Intro*/

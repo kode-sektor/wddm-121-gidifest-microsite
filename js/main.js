@@ -8,58 +8,87 @@ const profilePage = document.querySelectorAll('#profile');
 // Target specific page
 if (homePage.length > 0) {
 	
-	/*Slider*/
+	/*Slider Function*/
 
-	const sliderBtn = document.querySelectorAll('.slider-control');	// slider control
+	const slider = (e, section) => {
 
-	sliderBtn.forEach((control) => {	// loop across
+	  	let dir = (e.target).classList.contains('left') ? 'left' : 'right';	// left or right control?
+	  	let poster = '',
+	  		artistes = '',
+	  		sliderID = '';
 
-	    control.addEventListener('click', (e) => {	// listen for click event
+  		poster = (e.target).parentNode;
+  		sliderID =  poster.id;
 
-		  	let dir = (e.target).classList.contains('left') ? 'left' : 'right';	// left or right control?
+		if (section === 'hero') {
+			artistes = document.querySelector(`#${sliderID}`).querySelectorAll('.poster');
+		} else {
+			// Get the sliders for artiste collection
+			artistes = document.querySelector(`#${sliderID}`).querySelectorAll('.artistes > li');
+		}
+
+		// Add helper class to transform both sliders
+		if (dir === 'right') {
+			artistes.forEach((slider) => {
+				slider.classList.remove('slide-left');
+				slider.classList.add('slide-right');
+			});
+
+			// Set indicator to first element if right nav button is clicked
+
+			if (section === 'artiste-collection') {
+				document.querySelector(`#${sliderID}`).querySelector('.current').classList.remove('current');
+				document.querySelector(`#${sliderID}`).querySelector('.slide-counter').querySelector('li:last-child').classList.add('current');
+
+				// Set current slider gauge
+				document.querySelector(`#${sliderID}`).querySelector('.artiste-controls .bar').style.width = '100%';
+			}
 			
-			const poster = (e.target).parentNode;	// get parent section
-			const slider = poster.id;	// get parent section id
 
-			// get the sliders
-			const artistes = document.querySelector(`#${slider}`).querySelectorAll('.artistes > li');	
+		} else {
 
 			// Add helper class to transform both sliders
-			if (dir === 'right') {
-				artistes.forEach((slider) => {
-					slider.classList.remove('slide-left');
-					slider.classList.add('slide-right');
-				});
+			artistes.forEach((slider) => {
+				slider.classList.remove('slide-right');
+				slider.classList.add('slide-left');
+			});
 
-				// Set indicator to first element if right nav button is clicked
-				document.querySelector(`#${slider}`).querySelector('.current').classList.remove('current');
-				document.querySelector(`#${slider}`).querySelector('.slide-counter').querySelector('li:last-child').classList.add('current');
-
-				// Set current slider gauge
-				document.querySelector(`#${slider}`).querySelector('.artiste-controls .bar').style.width = '100%';
-
-			} else {
-
-				// Add helper class to transform both sliders
-				artistes.forEach((slider) => {
-					slider.classList.remove('slide-right');
-					slider.classList.add('slide-left');
-				});
-
+			if (section === 'artiste-collection') {
 				// Set indicator to first element if left nav button is clicked
-				document.querySelector(`#${slider}`).querySelector('.current').classList.remove('current');
-				document.querySelector(`#${slider}`).querySelector('.slide-counter').querySelector('li:first-child').classList.add('current');
+				document.querySelector(`#${sliderID}`).querySelector('.current').classList.remove('current');
+				document.querySelector(`#${sliderID}`).querySelector('.slide-counter').querySelector('li:first-child').classList.add('current');
 
 				// Set current slider gauge
-				document.querySelector(`#${slider}`).querySelector('.artiste-controls .bar').style.width = '50%';
+				document.querySelector(`#${sliderID}`).querySelector('.artiste-controls .bar').style.width = '50%';
 			}
-
-		});
-		
-	});
+		}
 	
-};
+	}
 
+
+	// Hero slider
+
+	const heroSliderBtn = document.querySelectorAll('.hero .slider-control');	// slider control
+
+	heroSliderBtn.forEach((control) => {	// loop across
+		control.addEventListener('click', (e) => {	// listen for click event
+			slider(e, 'hero');
+		});	
+	});
+
+	// Artiste collection slider
+
+	const sliderBtn = document.querySelectorAll('.artiste-collection .slider-control');	// slider control
+
+	sliderBtn.forEach((control) => {	// loop across
+		control.addEventListener('click', (e) => {	// listen for click event
+			slider(e, 'artiste-collection');
+
+		});	
+	});
+
+}
+		
 
 /*PROFILE PAGE*/
 
