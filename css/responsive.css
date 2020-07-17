@@ -1,0 +1,54 @@
+  
+@media (min-width: 30rem) {
+    
+}
+
+@media (min-width: 48rem) {
+	.main-nav-links {
+		display: flex;
+	}    
+	.mobile-nav-btn {
+		display: none;
+	}
+	.caption .name {
+		font-size: 2.0em;
+	}
+	.slide-content > figure {
+		width: 65%;
+	}
+}
+
+@media (min-width: 62rem) {
+
+	.caption .name {
+		font-size: 2.75em;
+	}
+	.slide-content > figure {
+		width: 50%;
+	}
+    
+}
+
+@media (min-width: 75rem) {
+	.hero {
+		width: 75%;
+	}
+	.hero:before {
+		position: absolute;
+		content: "";
+		right: 50px;
+		height: 100%;
+		border: thin solid rgba(250, 250, 250, .1);
+	}
+	.hero:after {
+		position: absolute;
+		content: "";
+		bottom: -2px;
+		right: 0px;
+		width: 60%;
+		border: 2px solid var(--red);
+	}
+    .caption .name {
+    	font-size: 3.5em;
+    }
+}

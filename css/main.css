@@ -211,32 +211,18 @@ address {
 	background-color: var(--light-blue);
 }
 .hero {
-	width: 75%;
+	width: 100%;
 	position: relative;
 	padding-left: 50px;
 	margin: auto;
 	background-color: black;
-}
-.hero:before {
-	position: absolute;
-	content: "";
-	right: 50px;
-	height: 100%;
-	border: thin solid rgba(250, 250, 250, .1);
-}
-.hero:after {
-	position: absolute;
-	content: "";
-	bottom: -2px;
-	right: 0px;
-	width: 60%;
-	border: 2px solid var(--red);
 }
 .main-nav-bar, .main-nav-links, .social-links {
 	display: flex;
 }
 .main-nav-bar {
 	justify-content: space-between;
+	align-items: center;
 	flex: 0 0 100%;
 	padding: 5px 10px;
 	border-bottom: thin solid rgba(229, 229, 229, .1);
@@ -247,6 +233,7 @@ address {
 }
 .main-nav-links {
 	justify-content: space-around;
+	display: none;
 }
 .main-nav-links li {
 	padding: 0 12.5px;
@@ -263,6 +250,14 @@ address {
 	display: block;
 	font-size: 1.3em;
 	color: var(--link);
+}
+.fa-search {
+	cursor: pointer;
+}
+.mobile-nav-btn {
+	-webkit-appearance: none;
+	border: 0;
+	padding: 5px 10px;
 }
 .poster-slider {
 	display: flex;
@@ -314,7 +309,7 @@ address {
 	position: relative;
 	left: 60px;
 	color: white;
-	font-size: 3.5em;
+	font-size: 1.5em;
 }	
 .caption .name strong {
 	position: relative;
@@ -351,9 +346,8 @@ address {
 .slide-content > figure {
 	position: relative;
 	padding-top: 50px;
-	/right: 50px;
 	height: inherit;
-	width: 50%;
+	width: 80%;
 	height: 380px;
 }
 .slide-content > figure img:not(.live-stamp) {
@@ -397,7 +391,7 @@ address {
 	display: inline-block;
 	margin-bottom: 15px;
 	padding: 10px 15px;
-	background-color: rgba(238, 16, 16, .4);
+	background-color: rgba(238, 16, 16, .7);
 	color: white;
 	text-align: center
 	font-weight: bolder;
@@ -409,7 +403,7 @@ address {
 }
 .booked-tickets-total {
 	margin-left: 10px;
-	font-size: .8em;
+	font-size: .9em;
 	color: white;
 }
 .booked-tickets-total .count {
