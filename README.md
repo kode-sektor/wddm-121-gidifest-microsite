@@ -1,5 +1,7 @@
 GitHub Link: https://kode-sektor.github.io/wddm-121-gidifest-microsite/index.html
 
+<img src="img/gidifest-microsite.png" alt="poster image"/>
+
 # wddm-121-gidifest-microsite
 wddm-121-gidifest-microsite
 
